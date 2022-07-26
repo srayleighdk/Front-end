@@ -27,7 +27,7 @@
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus iste libero autem eaque quae ducimus, rem eveniet corporis! Non vitae quam sequi perferendis aspernatur mollitia exercitationem nisi fugit suscipit at!</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit maiores nihil atque, aliquid vero repudiandae magni ipsam similique sapiente rerum delectus! Adipisci, ipsum quo harum unde nesciunt sapiente. Dicta, voluptatem?</p>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur eum sequi aliquid hic corrupti assumenda repudiandae iure, delectus, nostrum, temporibus recusandae saepe beatae dolorem amet! Minima esse odio sequi error?</p>
-                    <p>Fun fact! I've been programing for <span id="time-container">0</span></p>
+                    <p>Fun fact! I've been programing for <span id="time-container">0</span> seconds!</p>
                 </div>
                 <img src="src/IMG_20220715_190447.jpg" alt="photo of me" class="portrait">
             </div>
@@ -64,4 +64,17 @@
 
     <footer>Made with <span class="heart">♥</span> in HCM</footer>
 </body>
+<script>
+    const timeContainer = document.getElementById("time-container");
+    const birth_day = "12-08-2019";
+    const birth_day_date = new Date(birth_day);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+        const now = new Date();
+        const difference = Math.floor((now.getTime() - birth_day_date.getTime()) / 1000);
+
+        timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+</script>
 </html>
