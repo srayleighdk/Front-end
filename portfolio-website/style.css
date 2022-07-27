@@ -108,3 +108,9 @@ a {
     width: 2rem;
     margin-top: var(--spacing-1);
 }
+
+@media only screen and (max-width: 600px) {
+    .about-me-container {
+        flex-direction: column;
+    }
+}
