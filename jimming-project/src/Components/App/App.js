@@ -6,16 +6,6 @@ import Playlist from '../Playlist/Playlist';
 import { useEffect, useState } from 'react';
 import Spotify from '../../util/Spotify';
 
-const data = [{
-  id: 1,
-  name: 'test',
-  artist: 'test',
-  album: 'test'
-}]
-
-let data1 = [
-  {id:2, name:'test2', artist:'test2', album:'test2'}
-];
 
 function App() {
   const [searchResult, setSearchResult] = useState([]);
