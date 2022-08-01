@@ -49,12 +49,14 @@ function App() {
   }
 
   return (
-    <div className="App w-[90vw] mx-auto max-w-2xl ">
-      <h1 className='mt-8 mb-1 mx-auto text-center w-full text-3xl font-bold text-indigo-700'>Our Tours</h1>
-      <div className="w-[6rem] h-[0.25rem] bg-slate-800 mx-auto"></div>
-      <Tours tours={tours} removeTour={removeTour}/>
+    <div className="bg-gray-300">
+      <div className="App w-[90vw] mx-auto max-w-2xl ">
+        <h1 className='mt-8 mb-1 mx-auto text-center w-full text-3xl font-bold text-indigo-700'>Our Tours</h1>
+        <div className="w-[6rem] h-[0.25rem] bg-slate-800 mx-auto"></div>
+        <Tours tours={tours} removeTour={removeTour}/>
+      </div>
     </div>
-  );
-}
+    );
+};
 
 export default App;
